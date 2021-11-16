@@ -1,8 +1,10 @@
 terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
+  backend "remote" {
+    hostname      = "app.terraform.io"
+    organization  = "company-kapil"
+
+    workspaces {
+      name = "terraform-upgrade-demo"
     }
   }
-  required_version = ">= 0.13"
 }

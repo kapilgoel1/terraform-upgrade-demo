@@ -7,7 +7,7 @@ provider "aws" {
 
 module "ec2-instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
-  version = "3.2.0"
+  version = "2.0.0"
   # insert the 4 required variables here
   ami = "ami-0f1fb91a596abf28d"
   instance_type = "t2.micro"
